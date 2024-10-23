@@ -18,6 +18,10 @@ button {
   transition: background-color 0.3s;
 }
 
+button:hover {
+  background-color: #ddd;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
