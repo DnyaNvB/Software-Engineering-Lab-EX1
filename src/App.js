@@ -4,6 +4,10 @@ import './App.css';
 function App() {
   const [input, setInput] = useState('');
   const [result, setResult] = useState('');
+  const handleClick = (value) => {
+    setInput(input + value);
+  };
+  
   return (
     <div className="App">
       <div className="calculator">
