@@ -64,3 +64,13 @@ button:hover {
     transform: rotate(360deg);
   }
 }
+
+@media (max-width: 600px) {
+  .calculator {
+    width: 100%;
+  }
+  button {
+    padding: 15px;
+    font-size: 1.2em;
+  }
+}
