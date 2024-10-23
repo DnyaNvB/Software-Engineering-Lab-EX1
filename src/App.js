@@ -4,6 +4,14 @@ import './App.css';
 function App() {
   const [input, setInput] = useState('');
   const [result, setResult] = useState('');
+  const calculateResult = () => {
+    try {
+      setResult(eval(input));
+    } catch (error) {
+      setResult('Error');
+    }
+  };
+
   const handleClick = (value) => {
     setInput(input + value);
   };
