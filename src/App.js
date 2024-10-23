@@ -7,6 +7,10 @@ function App() {
   const handleClick = (value) => {
     setInput(input + value);
   };
+  const handleClear = () => {
+    setInput('');
+    setResult('');
+  }; 
   
   return (
     <div className="App">
