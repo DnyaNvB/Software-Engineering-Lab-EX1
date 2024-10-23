@@ -6,7 +6,7 @@ function App() {
   const [result, setResult] = useState('');
   const calculateResult = () => {
     try {
-      setResult(eval(input));
+    setResult(eval(input).toFixed(2));
     } catch (error) {
       setResult('Error');
     }
