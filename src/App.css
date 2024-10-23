@@ -35,6 +35,12 @@ button:hover {
   color: #333;
 }
 
+.display input {
+  font-size: 2em;
+  text-align: right;
+  width: 100%;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
