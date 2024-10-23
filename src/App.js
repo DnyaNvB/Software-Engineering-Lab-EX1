@@ -11,7 +11,11 @@ function App() {
     setInput('');
     setResult('');
   }; 
-  
+
+const handleUndo = () => {
+  setInput(input.slice(0, -1));
+};
+
   return (
     <div className="App">
       <div className="calculator">
