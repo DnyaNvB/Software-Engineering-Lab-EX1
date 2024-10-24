@@ -7,7 +7,15 @@
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  background-color: #f7f7f7;
 }
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
 button {
   padding: 20px;
   font-size: 1.5em;
@@ -27,6 +35,19 @@ button:hover {
   background-color: #ddd;
 }
 
+.clear {
+  background-color: #ffcccc;
+  font-weight: bold;
+}
+@media (max-width: 600px) {
+  .calculator {
+    width: 100%;
+  }
+  button {
+    padding: 15px;
+    font-size: 1.2em;
+  }
+}
 .display {
   margin-bottom: 20px;
 }
