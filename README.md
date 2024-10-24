@@ -98,9 +98,6 @@ git stash pop
 #  سوال ۷.
 
 <div style="text-align: right">
-
-تفاوت‌های بین Local Repository و Remote Repository چیست؟
-
 در سیستم کنترل نسخه گیت، ما با دو نوع Repository سر و کار داریم: Local Repository و Remote Repository.
 <div dir="rtl">
 **Local Repository** مخزنی است که روی سیستم لوکال ما قرار دارد. وقتی ما با گیت کار می‌کنیم، تغییرات را در Local Repository خود اعمال می‌کنیم. این مخزن شامل تمام فایل‌ها، Commits، Branches و تاریخچه کامل پروژه ما است. ما می‌توانیم به صورت آفلاین با Local Repository کار کنیم، تغییرات را ایجاد کنیم، Commit کنیم و Branch‌های جدید بسازیم. تمامی این عملیات به صورت لوکال انجام می‌شود و تاثیری بر دیگران ندارد.
