@@ -4,6 +4,26 @@ import './App.css';
 function App() {
   const [input, setInput] = useState('');
   const [result, setResult] = useState('');
+
+  useEffect(() => {
+    const handleKeyPress = (e) => {
+      const validKeys = '0123456789+-*/.=';
+      if (validKeys.includes(e.key)) {
+        handleClick(e.key);
+      } else if (e.key === 'Enter') {
+        calculateResult();
+      } else if (e.key === 'Backspace') {
+        handleUndo();
+      }
+    };
+  
+    document.addEventListener('keydown', handleKeyPress);
+  
+    return () => {
+      document.removeEventListener('keydown', handleKeyPress);
+    };
+  }, [input]);
+  
   const calculateResult = () => {
     try {
     setResult(eval(input).toFixed(2));
