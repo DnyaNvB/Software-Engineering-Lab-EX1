@@ -1,5 +1,94 @@
 .App {
   text-align: center;
+  display: flex;
+  justify-content: center; /* Center calculator horizontally */
+  align-items: center; /* Center calculator vertically */
+  min-height: 100vh; /* Full viewport height for centering */
+}
+
+.calculator {
+  display: inline-block;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  background-color: #e8f0fe; /* Soft blue background */
+  width: 100%;
+  max-width: 300px; /* Reduced max width */
+}
+
+.display {
+  background-color: #1a1a1a; /* Darker display for contrast */
+  color: #f0f0f0; /* Light grey text for readability */
+  font-size: 1.8em; /* Slightly smaller font size */
+  padding: 12px; /* Slightly reduced padding */
+  border-radius: 5px;
+  margin-bottom: 20px;
+  text-align: right;
+  width: 100%;
+}
+
+.display input {
+  background: none;
+  border: none;
+  color: inherit; /* Uses color from .display */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.8em; /* Reduced font size for balance */
+  width: 100%;
+}
+
+.result {
+  font-size: 1.5em; /* Adjusted for balance */
+  margin-bottom: 10px;
+  text-align: center;
+  color: #f0f0f0;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  padding: 20px;
+  font-size: 1.5em;
+  cursor: pointer;
+  background-color: #4a90e2; /* Blue button background */
+  color: #fff; /* White text for buttons */
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:active {
+  background-color: #2e6da4; /* Darker blue on press */
+  transform: scale(0.98); /* Slightly reduce size on press */
+}
+
+button:hover {
+  background-color: #357abd; /* Darker blue on hover */
+  transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+.clear {
+  background-color: #ff7f7f; /* Light red for clear button */
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .result {
+    font-size: 1.5em; /* Increased font size for visibility */
+  }
+
+  .calculator {
+    width: 100%;
+  }
+
+  button {
+    padding: 15px;
+    font-size: 1.2em;
+  }
 }
 
 .App-logo {
