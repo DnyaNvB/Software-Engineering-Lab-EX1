@@ -4,27 +4,14 @@ import './App.css';
 function App() {
   const [input, setInput] = useState('');
   const [result, setResult] = useState('');
-  useEffect(() => {
-    const handleKeyPress = (e) => {
-      const validKeys = '0123456789+-*/.=';
-      if (validKeys.includes(e.key)) {
-        handleClick(e.key);
-      } else if (e.key === 'Enter') {
-        calculateResult();
-      } else if (e.key === 'Backspace') {
-        handleUndo();
-      }
-    };
-  
-    document.addEventListener('keydown', handleKeyPress);
-  
-    return () => {
-      document.removeEventListener('keydown', handleKeyPress);
-    };
-  }, [input]);
   const calculateResult = () => {
     try {
-      setResult(eval(input));  // Note: eval can be unsafe, consider a math parser for real projects
+      const result = eval(input);
+      if (result === Infinity || result === -Infinity) {
+        setResult('Cannot divide by zero');
+      } else {
+        setResult(result.toFixed(2));
+      }
     } catch (error) {
       setResult('Error');
     }
@@ -40,9 +27,9 @@ function App() {
     setResult('');
   }; 
 
-const handleUndo = () => {
-  setInput(input.slice(0, -1));
-};
+  const handleUndo = () => {
+    setInput(input.slice(0, -1));
+  };
 
   return (
     <div className="App">
