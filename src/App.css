@@ -29,7 +29,10 @@
   color: inherit; /* Uses color from .display */
   overflow: hidden;
   text-overflow: ellipsis;
+  font-size: 2.5em; 
+  width: 100%; 
 }
+
 
 .buttons {
   display: grid;
@@ -115,6 +118,11 @@ button:hover {
 
 .result {
   font-size: 1.5em;
+  font-size: 2em; 
   margin-bottom: 10px;
+  margin-bottom: 10px; 
   text-align: center;
+  text-align: center; 
+  color: #f0f0f0; 
 }
+
