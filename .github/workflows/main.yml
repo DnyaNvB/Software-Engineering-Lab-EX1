@@ -11,10 +11,6 @@ on:
   pull_request:
     branches:
       - main
-      - dev
-      - feature
-      - hotfix
-      - report
       
 jobs:
   build:
