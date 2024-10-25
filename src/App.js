@@ -4,6 +4,34 @@ import './App.css';
 function App() {
   const [input, setInput] = useState('');
   const [result, setResult] = useState('');
+
+  useEffect(() => {
+    const handleKeyPress = (e) => {
+      const validKeys = '0123456789+-*/.=';
+      if (validKeys.includes(e.key)) {
+        handleClick(e.key);
+      } else if (e.key === 'Enter') {
+        calculateResult();
+      } else if (e.key === 'Backspace') {
+        handleUndo();
+      }
+    };
+  
+    document.addEventListener('keydown', handleKeyPress);
+  
+    return () => {
+      document.removeEventListener('keydown', handleKeyPress);
+    };
+  }, [input]);
+  
+  const calculateResult = () => {
+    try {
+      setResult(eval(input));  // Note: eval can be unsafe, consider a math parser for real projects
+    } catch (error) {
+      setResult('Error');
+    }
+  };
+
   const handleClick = (value) => {
     setInput(input + value);
   };
@@ -19,7 +47,7 @@ const handleUndo = () => {
   return (
     <div className="App">
       <div className="calculator">
-        <h1>Simple Calculator</h1>
+        <h1>Calculator</h1>
         <div className="display">
           <input type="text" value={input} readOnly />
           <div className="result">{result}</div>
@@ -41,6 +69,7 @@ const handleUndo = () => {
           <button onClick={handleClear}>C</button>
           <button onClick={handleUndo}>Undo</button>
           <button onClick={calculateResult}>=</button>
+          <button onClick={() => handleClick('*')}>*</button>
           <button onClick={() => handleClick('/')}>/</button>
         </div>
       </div>
