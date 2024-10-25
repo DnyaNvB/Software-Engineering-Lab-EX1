@@ -13,14 +13,14 @@
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
   background-color: #e8f0fe; /* Soft blue background */
   width: 100%;
-  max-width: 350px; /* Ensures calculator doesn't become too wide */
+  max-width: 300px; /* Reduced max width */
 }
 
 .display {
   background-color: #1a1a1a; /* Darker display for contrast */
-  color: #f0f0f0; /* Light grey text for better readability */
-  font-size: 2em; /* Slightly reduced font size */
-  padding: 15px;
+  color: #f0f0f0; /* Light grey text for readability */
+  font-size: 1.8em; /* Slightly smaller font size */
+  padding: 12px; /* Slightly reduced padding */
   border-radius: 5px;
   margin-bottom: 20px;
   text-align: right;
@@ -33,12 +33,12 @@
   color: inherit; /* Uses color from .display */
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: 2em; /* Adjusted font size for input */
+  font-size: 1.8em; /* Reduced font size for balance */
   width: 100%;
 }
 
 .result {
-  font-size: 1.8em; /* Slightly reduced for balance */
+  font-size: 1.5em; /* Adjusted for balance */
   margin-bottom: 10px;
   text-align: center;
   color: #f0f0f0;
@@ -78,7 +78,7 @@ button:hover {
 
 @media (max-width: 600px) {
   .result {
-    font-size: 1.5em;
+    font-size: 1.5em; /* Increased font size for visibility */
   }
 
   .calculator {

@@ -4,6 +4,7 @@ import './App.css';
 function App() {
   const [input, setInput] = useState('');
   const [result, setResult] = useState('');
+
   const calculateResult = () => {
     try {
       const result = eval(input);
@@ -17,15 +18,14 @@ function App() {
     }
   };
 
-
   const handleClick = (value) => {
-    setInput(input + value);
+    setInput((prevInput) => prevInput + value);
   };
-  
+
   const handleClear = () => {
     setInput('');
     setResult('');
-  }; 
+  };
 
   const handleUndo = () => {
     setInput(input.slice(0, -1));
@@ -53,6 +53,7 @@ function App() {
           <button onClick={() => handleClick('9')}>9</button>
           <button onClick={() => handleClick('*')}>*</button>
           <button onClick={() => handleClick('0')}>0</button>
+          <button onClick={() => handleClick('.')}>.</button> {/* Decimal button */}
           <button onClick={handleClear}>AC</button>
           <button onClick={handleUndo}>←</button>
           <button onClick={calculateResult}>=</button>
