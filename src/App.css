@@ -47,6 +47,11 @@ button {
   transition: background-color 0.3s, transform 0.2s; /* Added transform for effect */
 }
 
+button:active {
+  background-color: #2e6da4; /* Darker blue on press */
+  transform: scale(0.98); /* Slightly reduce size on press */
+}
+
 button:hover {
   background-color: #357abd; /* Darker blue on hover */
   transform: scale(1.05); /* Slightly enlarge button on hover */
