@@ -1,25 +1,36 @@
 import React, { useState } from 'react';
+import { evaluate } from 'mathjs'; // Import evaluate from mathjs
 import './App.css';
 
 function App() {
   const [input, setInput] = useState('');
   const [result, setResult] = useState('');
-  const handleClick = (value) => {
-    setInput(input + value);
+
+  const calculateResult = () => {
+    try {
+      const result = evaluate(input); // Use evaluate instead of eval
+      setResult(result.toFixed(2));
+    } catch (error) {
+      setResult('Error');
+    }
   };
+  const handleClick = (value) => {
+    setInput((prevInput) => prevInput + value);
+  };
+
   const handleClear = () => {
     setInput('');
     setResult('');
-  }; 
+  };
 
-const handleUndo = () => {
-  setInput(input.slice(0, -1));
-};
+  const handleUndo = () => {
+    setInput(input.slice(0, -1));
+  };
 
   return (
     <div className="App">
       <div className="calculator">
-        <h1>Simple Calculator</h1>
+        <h1>Calculator</h1>
         <div className="display">
           <input type="text" value={input} readOnly />
           <div className="result">{result}</div>
@@ -38,8 +49,9 @@ const handleUndo = () => {
           <button onClick={() => handleClick('9')}>9</button>
           <button onClick={() => handleClick('*')}>*</button>
           <button onClick={() => handleClick('0')}>0</button>
-          <button onClick={handleClear}>C</button>
-          <button onClick={handleUndo}>Undo</button>
+          <button onClick={() => handleClick('.')}>.</button> {/* Decimal button */}
+          <button onClick={handleClear}>AC</button>
+          <button onClick={handleUndo}>←</button>
           <button onClick={calculateResult}>=</button>
           <button onClick={() => handleClick('/')}>/</button>
         </div>
@@ -47,3 +59,5 @@ const handleUndo = () => {
     </div>
   );
 }
+
+export default App;
