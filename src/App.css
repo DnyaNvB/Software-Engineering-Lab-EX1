@@ -1,3 +1,4 @@
+
 .App {
   text-align: center;
 }
@@ -10,8 +11,6 @@
   background-color: #f7f7f7;
 }
 
-
-
 .display {
   background-color: #333;
   color: white;
@@ -22,6 +21,7 @@
   text-align: right;
   width: 100%;
 }
+
 .display input {
   background: none;
   border: none;
@@ -56,24 +56,19 @@ button:hover {
   background-color: #ddd;
 }
 
-.clear {
-  background-color: #ffcccc;
-  font-weight: bold;
-}
 @media (max-width: 600px) {
+  .result {
+    font-size: 1.2em;
+  }
+
   .calculator {
     width: 100%;
   }
+
   button {
     padding: 15px;
     font-size: 1.2em;
   }
-}
-
-.display input {
-  font-size: 2em;
-  text-align: right;
-  width: 100%;
 }
 
 .App-logo {
@@ -111,27 +106,8 @@ button:hover {
   }
 }
 
-
-
 .result {
   font-size: 1.5em;
   margin-bottom: 10px;
   text-align: center;
-}
-
-
-
-@media (max-width: 600px) {
-
-  .result {
-    font-size: 1.2em;
-  }
-  
-  .calculator {
-    width: 100%;
-  }
-  button {
-    padding: 15px;
-    font-size: 1.2em;
-  }
 }
