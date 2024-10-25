@@ -56,7 +56,6 @@ function App() {
           <button onClick={handleClear}>C</button>
           <button onClick={handleUndo}>Undo</button>
           <button onClick={calculateResult}>=</button>
-          <button onClick={() => handleClick('*')}>*</button>
           <button onClick={() => handleClick('/')}>/</button>
         </div>
       </div>
