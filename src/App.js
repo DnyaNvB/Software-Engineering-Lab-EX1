@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { evaluate } from 'mathjs'; // Import evaluate from mathjs
 import './App.css';
 
 function App() {
@@ -7,17 +8,12 @@ function App() {
 
   const calculateResult = () => {
     try {
-      const result = eval(input);
-      if (result === Infinity || result === -Infinity) {
-        setResult('Cannot divide by zero');
-      } else {
-        setResult(result.toFixed(2));
-      }
+      const result = evaluate(input); // Use evaluate instead of eval
+      setResult(result.toFixed(2));
     } catch (error) {
       setResult('Error');
     }
   };
-
   const handleClick = (value) => {
     setInput((prevInput) => prevInput + value);
   };
