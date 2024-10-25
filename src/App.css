@@ -49,7 +49,22 @@ button:hover {
   }
 }
 .display {
+  background-color: #333;
+  color: white;
+  font-size: 2em;
+  padding: 15px;
+  border-radius: 5px;
   margin-bottom: 20px;
+  text-align: right;
+  width: 100%;
+}
+.display input {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2em;
+  text-align: right;
+  width: 100%;
 }
 .result {
   font-size: 1.5em;
