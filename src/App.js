@@ -24,9 +24,15 @@ function App() {
     };
   }, [input]);
   
+
   const calculateResult = () => {
     try {
-      setResult(eval(input));  // Note: eval can be unsafe, consider a math parser for real projects
+      const result = eval(input);
+      if (result === Infinity || result === -Infinity) {
+        setResult('Cannot divide by zero');
+      } else {
+        setResult(result.toFixed(2));
+      }
     } catch (error) {
       setResult('Error');
     }
