@@ -47,7 +47,7 @@ const handleUndo = () => {
   return (
     <div className="App">
       <div className="calculator">
-        <h1>Simple Calculator</h1>
+        <h1>Calculator</h1>
         <div className="display">
           <input type="text" value={input} readOnly />
           <div className="result">{result}</div>
