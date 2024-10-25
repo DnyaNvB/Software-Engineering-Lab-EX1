@@ -30,9 +30,11 @@ function App() {
     }
   };
 
-  const handleClick = (value) => {
-    setInput(input + value);
-  };
+
+  const handleClick = useCallback((value) => {
+    setInput((prevInput) => prevInput + value);
+  }, []);
+
   const handleClear = () => {
     setInput('');
     setResult('');
