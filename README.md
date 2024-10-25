@@ -1,4 +1,3 @@
-
 # Software-Engineering-Lab EX1
 <div dir="rtl">
 
@@ -208,7 +207,8 @@ Local Repository مخزنی است که روی سیستم لوکال ما قرا
 
 در این فایل، تنظیماتی قرار داده شده است که به ازای هر `push` به مخزن، GitHub Actions به‌طور خودکار اجرا شده و فرآیند استقرار (deploy) به GitHub Pages آغاز می‌شود. این عملیات اتوماتیک تضمین می‌کند که آخرین تغییرات به‌طور مستقیم در نسخه‌ی آنلاین پروژه اعمال شده و پروژه همواره به‌روز باشد
 
-kanban = https://github.com/users/DnyaNvB/projects/1/views/1.
+## تقسیم وظایف:
+  همچنین در لینک زیر تقسیم وظایف به همراه وظایف دیده می‌شوند که به مرحله‌ی انجام شده برده شده‌اند.
+kanban board link = https://github.com/users/DnyaNvB/projects/1/views/1.
 
 </div>
-

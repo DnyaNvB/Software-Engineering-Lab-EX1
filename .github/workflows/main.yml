@@ -4,10 +4,14 @@ on:
   push:
     branches:
       - main
+      - dev
+      - feature
+      - hotfix
+      - report
   pull_request:
     branches:
       - main
-
+      
 jobs:
   build:
 
