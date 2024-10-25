@@ -26,7 +26,7 @@ function App() {
   
   const calculateResult = () => {
     try {
-    setResult(eval(input).toFixed(2));
+      setResult(eval(input));  // Note: eval can be unsafe, consider a math parser for real projects
     } catch (error) {
       setResult('Error');
     }
