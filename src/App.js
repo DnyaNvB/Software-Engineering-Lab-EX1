@@ -40,9 +40,9 @@ function App() {
     setResult('');
   }; 
 
-const handleUndo = () => {
-  setInput(input.slice(0, -1));
-};
+  const handleUndo = () => {
+    setInput(input.slice(0, -1));
+  };
 
   return (
     <div className="App">
